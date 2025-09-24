@@ -1,0 +1,102 @@
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #1c1c1c;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+body {
+  width: 800px;
+  margin-top: 1em;
+  position: relative;
+}
+
+header {
+  background: url(images/THJJRUhNlEc.png) no-repeat;
+  height: 30%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  background-color: #1c1c1c;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 820;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: 710;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: #121212;
+}
+
+form {
+  text-align: center;
+  background-color: transparent;
+  position: absolute;
+  top: 250px;
+  background-color: #2e2e2f;
+  justify-self: center;
+  border-radius: 10px;
+}
+
+form input,
+button {
+  height: 60px;
+  font-size: 1.3rem;
+  border: none;
+  color: white;
+}
+
+input {
+  background: url(images/Icon.png) no-repeat;
+  background-position: 25px center;
+  padding-left: 3.3em;
+  background-size: 25px;
+  width: 450px;
+  border-radius: 10px 0 0 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+form button {
+  width: 190px;
+  background-color: #4b4b4b;
+  border-left: 1px solid #4b4b4b;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+form button:active {
+  background-color: #d1d5db;
+  transform: translateY(1px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+}
+
+.explore-img {
+  position: absolute;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+}
