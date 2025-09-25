@@ -39,9 +39,12 @@ A simple web app that lets you save your movie watchlist using the [OMDb API](ht
 
 ```
 Movie-Watchlist/
+├── images
 ├── index.html
+├── script.js
 ├── styles.css
-├── app.js
+├── watchList.js
+├── watch_list.html
 └── README.md
 ```
 
