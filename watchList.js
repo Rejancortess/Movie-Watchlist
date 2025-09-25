@@ -14,7 +14,7 @@ async function renderWatchList() {
     const res = await fetch(`http://www.omdbapi.com/?apikey=${key}&i=${movieId}`);
     const data = await res.json();
     mainEl.innerHTML += `
-    <div class="movie-container" id='movie-container'>
+    <div class="movie-container movie-card" id='movie-container'>
         <img class="movie-poster" src="${data.Poster}" />
         <div>
           <div class="movie-details">
@@ -28,14 +28,13 @@ async function renderWatchList() {
               <span>${data.Genre}</span>
             </div>
             <div>
-              <img class='add-watchlist' src="images/Icon (1).png " alt="" />
-              <p class="watchlist">Watchlist</p>
+              <img data-id='${movieId}' class='remove-btn' src="images/remove-icon.png" alt="" />
+              <p class="watchlist">Remove</p>
             </div>
           </div>
           <p class="movie-p">${data.Plot}</p>
         </div>
-      </div>
-      <hr>`;
+      </div>`;
   }
 }
 
@@ -44,4 +43,16 @@ renderWatchList();
 document.getElementById('search-movies').addEventListener('click', (e) => {
   localStorage.setItem('watchList', JSON.stringify(savedWatchlist));
   window.location.href = 'index.html';
+});
+
+document.getElementById('main').addEventListener('click', (e) => {
+  for (let movieID of savedWatchlist) {
+    if (e.target.dataset.id === movieID) {
+      console.log(e.target.dataset.id);
+      savedWatchlist = savedWatchlist.filter((id) => id !== e.target.dataset.id);
+      localStorage.setItem('watchList', JSON.stringify(savedWatchlist));
+      console.log(savedWatchlist);
+      e.target.closest('.movie-container').remove();
+    }
+  }
 });

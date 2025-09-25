@@ -111,10 +111,11 @@ form button:active {
   margin-right: auto;
   gap: 30px;
   margin-bottom: 4em;
+  border-bottom: #640d0d;
 }
 
 .movie-poster {
-  width: 50%;
+  width: 172.08;
   border-radius: 5px;
 }
 
@@ -168,7 +169,8 @@ hr {
   height: 3px;
 }
 
-.add-watchlist {
+.add-watchlist,
+.remove-btn {
   cursor: pointer;
 }
 
@@ -190,4 +192,14 @@ hr {
 
 .watchlist-msg div img {
   cursor: pointer;
+}
+
+#search-movies,
+#my-watchlist {
+  cursor: pointer;
+}
+
+.movie-card {
+  border-bottom: 2px solid #4b4a4a;
+  padding-bottom: 2em;
 }
