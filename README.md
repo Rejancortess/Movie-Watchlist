@@ -10,13 +10,6 @@ A simple web app that lets you save your movie watchlist using the [OMDb API](ht
 - **Remove from Watchlist**: Easily remove movies you no longer want to watch.
 - **Responsive Design**: Works great on mobile and desktop devices.
 
-## Demo
-
-> _Add a link to your live demo here if available._
-
-## Screenshots
-
-> _Add screenshots here for a better preview (optional)._
 
 ## Getting Started
 
