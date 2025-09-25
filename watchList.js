@@ -1,8 +1,7 @@
-let savedWatchlist = JSON.parse(localStorage.getItem('watchList')) || [];
-
 const key = 'd14fbb5e';
 const mainEl = document.getElementById('main');
-console.log(savedWatchlist);
+const searchMoviesEl = document.getElementById('search-movies');
+let savedWatchlist = JSON.parse(localStorage.getItem('watchList')) || [];
 
 async function renderWatchList() {
   if (savedWatchlist.length !== 0) {
@@ -14,12 +13,12 @@ async function renderWatchList() {
     const res = await fetch(`http://www.omdbapi.com/?apikey=${key}&i=${movieId}`);
     const data = await res.json();
     mainEl.innerHTML += `
-    <div class="movie-container movie-card" id='movie-container'>
+    <div class="movie-container movie-card">
         <img class="movie-poster" src="${data.Poster}" />
         <div>
           <div class="movie-details">
             <h2>${data.Title}</h2>
-            <span><img width="20px" src="images/Icon.svg" alt="" /></span>
+            <span><img width="20px" src="images/star.svg"/></span>
             <span>${data.imdbRating}</span>
           </div>
           <div class="genre">
@@ -40,12 +39,12 @@ async function renderWatchList() {
 
 renderWatchList();
 
-document.getElementById('search-movies').addEventListener('click', (e) => {
+searchMoviesEl.addEventListener('click', (e) => {
   localStorage.setItem('watchList', JSON.stringify(savedWatchlist));
   window.location.href = 'index.html';
 });
 
-document.getElementById('main').addEventListener('click', (e) => {
+mainEl.addEventListener('click', (e) => {
   for (let movieID of savedWatchlist) {
     if (e.target.dataset.id === movieID) {
       console.log(e.target.dataset.id);

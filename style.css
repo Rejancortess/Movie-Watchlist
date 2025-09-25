@@ -17,7 +17,7 @@ body {
 }
 
 header {
-  background: url(images/THJJRUhNlEc.png) no-repeat;
+  background: url(images/header-bg.png) no-repeat;
   height: 30%;
   background-size: cover;
   display: flex;
@@ -52,7 +52,7 @@ form {
   text-align: center;
   background-color: transparent;
   position: absolute;
-  top: 250px;
+  top: 260px;
   background-color: #2e2e2f;
   justify-self: center;
   border-radius: 10px;
@@ -111,11 +111,10 @@ form button:active {
   margin-right: auto;
   gap: 30px;
   margin-bottom: 4em;
-  border-bottom: #640d0d;
 }
 
 .movie-poster {
-  width: 172.08;
+  width: 50%;
   border-radius: 5px;
 }
 
@@ -169,8 +168,7 @@ hr {
   height: 3px;
 }
 
-.add-watchlist,
-.remove-btn {
+.add-watchlist {
   cursor: pointer;
 }
 
@@ -192,14 +190,4 @@ hr {
 
 .watchlist-msg div img {
   cursor: pointer;
-}
-
-#search-movies,
-#my-watchlist {
-  cursor: pointer;
-}
-
-.movie-card {
-  border-bottom: 2px solid #4b4a4a;
-  padding-bottom: 2em;
 }

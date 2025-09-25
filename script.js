@@ -17,7 +17,7 @@ async function searchMovie() {
         <div>
           <div class="movie-details">
             <h2>${data.Title}</h2>
-            <span><img width="20px" src="images/Icon.svg" alt="" /></span>
+            <span><img width="20px" src="images/star.svg" alt="" /></span>
             <span>${data.imdbRating}</span>
           </div>
           <div class="genre">
@@ -26,7 +26,7 @@ async function searchMovie() {
               <span>${data.Genre}</span>
             </div>
             <div>
-              <img class='add-watchlist' id="${movie.imdbID}" src="images/Icon (1).png " alt="" />
+              <img class='add-watchlist' id="${movie.imdbID}" src="images/add-icon.png" alt="" />
               <p class="watchlist">Watchlist</p>
             </div>
           </div>
